@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopEase</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'F:\ShopEase\shopease\static\style.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="nav-logo border">
+                <a href="{% url 'index' %}">
+                    <div class="logo"></div>
+                </a>
+            </div>
+            <div class="nav-address border">
+                <div class="add-icon"></div>
+            </div>
+            <div class="search-box">
+                <form method="GET" action="{% url 'search' %}" style="display: flex; width: 100%;">
+                    <select class="select">
+                        <option>All</option>
+                    </select>
+                    <input class="form" type="search" name="q" placeholder="Search ShopEase">
+                    <button type="submit" class="magnify"><i class="fas fa-search"></i></button>
+                </form>
+            </div>
+            <div class="language border">
+                <div class="flag-usa"></div>
+                <select class="select-lang">
+                    <option>EN</option>
+                </select>
+            </div>
+            <div class="user-portion border">
+                {% if user.is_authenticated %}
+                    <div class="dropdown">
+                        <a id="sign_in" href="#">Hello, {{ user.username }}</a>
+                        <div class="dropdown-content">
+                            <a href="{% url 'logout' %}" class="btn-logout";>Logout</a>
+                        </div>
+                    </div>
+                {% else %}
+                    <a id="sign_in" href="{% url 'signin' %}" style="font-size: 0,9em;">Hello, sign in</a>
+                {% endif %}
+            </div>
+            <div class="cart border">
+                <a href="{% url 'cart_detail' %}">
+                    <i class="fas fa-shopping-cart cart-icon" style="color: yellow;"></i>
+                    <p class="cart_likha">Cart</p>
+                </a>
+            </div>
+            <a href="{% url 'role_selection' %}" class="btn-role-selection">Select Role</a>
+        </div>
+
+        <div class="panel" style="background-color: black;">
+            <div class="panel-all dropdown">
+                <i class="fas fa-bars"></i>
+                <span id="all-panel">All</span>
+                <div class="dropdown-content">
+                    {% for genre, genre_name in genres %}
+                        <a href="{% url 'genre_products' genre %}">{{ genre_name }}</a>
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="other-panel" style="background-color: black;">
+                <p><a href="{% url 'get_to_know_us' %}" style="color: white;">Get to Know Us</a></p>
+                <p><a href="{% url 'add_product' %}" style="color: white;">Add Product</a></p>
+            </div>
+            <div class="shop-electron">
+                Shop deals in Electronics
+            </div>
+        </div>
+    </header>
+    <div class="hero-image"></div>
+    <div class="shop-section">
+        <div class="genre-container">
+            {% for genre_key, genre_name in genres %}
+                <div class="genre-box">
+                    <h2>{{ genre_name }}</h2>
+                    <div class="genre-image">
+                        <img src="{% static 'images/' %}{{ genre_key }}.jpg" alt="{{ genre_name }} Image">
+                    </div>
+                    <p class="price"><a href="{% url 'genre_products' genre_key %}">See More</a></p>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+    <footer>
+        <div class="foot-panel1">
+            <a href="#" style="color: white;" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;">Back to Top</a>
+        </div>
+        <div class="foot-panel2">
+            <ul>
+                <p class="foot-pera">Get to Know Us</p>
+                <a href="{% url 'get_to_know_us' %}">Careers</a>
+                <a href="{% url 'get_to_know_us' %}">Blog</a>
+                <a href="{% url 'get_to_know_us' %}">About ShopEase</a>
+                <a href="{% url 'get_to_know_us' %}">Investor Relations</a>
+                <a href="{% url 'get_to_know_us' %}">ShopEase Devices</a>
+                <a href="{% url 'get_to_know_us' %}">ShopEase Science</a>
+            </ul>
+            <ul></ul>
+            <ul></ul>
+        </div>
+        <div class="foot-panel3">
+            <div class="logo_foot"></div>
+        </div>
+        <div class="foot-panel5">
+            <p class="extra-2p5">©ShopEase.com, Inc. or its affiliates</p>
+        </div>
+    </footer>
+    <!-- Stripe Checkout Button -->
+    
+
+    
+
+</body>
+</html>

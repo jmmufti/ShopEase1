@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get to Know Us - ShopEase</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="nav-logo border">
+                <a href="{% url 'index' %}">
+                    <div class="logo"></div>
+                </a>
+            </div>
+            <!-- Add other navigation items here -->
+        </div>
+    </header>
+    <div class="container">
+        <h1>Get to Know Us</h1>
+        <p>Welcome to ShopEase! We are dedicated to providing you with the best shopping experience.</p>
+        <p>Our mission is to offer a wide variety of products at competitive prices, with exceptional customer service.</p>
+        <p>Thank you for choosing ShopEase!</p>
+    </div>
+    <footer>
+        <div class="foot-panel1">
+            Back to Top
+        </div>
+        <div class="foot-panel2">
+            <ul>
+                <p class="foot-pera">Get to Know Us</p>
+                <a href="{% url 'get_to_know_us' %}">Careers</a>
+                <a href="{% url 'get_to_know_us' %}">Blog</a>
+                <a href="{% url 'get_to_know_us' %}">About ShopEase</a>
+                <a href="{% url 'get_to_know_us' %}">Investor Relations</a>
+                <a href="{% url 'get_to_know_us' %}">ShopEase Devices</a>
+                <a href="{% url 'get_to_know_us' %}">ShopEase Science</a>
+            </ul>
+            <ul></ul>
+            <ul></ul>
+        </div>
+        <div class="foot-panel3">
+            <div class="logo_foot"></div>
+        </div>
+        <div class="foot-panel5">
+            <p class="extra-2p5">©ShopEase.com, Inc. or its affiliates</p>
+        </div>
+    </footer>
+</body>
+</html>

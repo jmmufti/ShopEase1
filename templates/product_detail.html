@@ -1,0 +1,99 @@
+
+
+{% block content %}
+<div class="container">
+    <div class="product-detail">
+        <div class="product-image">
+            <img src="{{ product.image.url }}" alt="{{ product.name }}">
+        </div>
+        <div class="product-info">
+            <h1>{{ product.name }}</h1>
+            <p class="description">{{ product.description }}</p>
+            <p class="price">Price: ${{ product.price }}</p>
+            <p class="availability">Availability: In Stock</p>
+            <div class="ratings">
+                <span>★★★★☆</span> <!-- Example static rating -->
+                <span class="reviews">(24 reviews)</span>
+            </div>
+            <div style="margin-top: 40px;">
+                <a href="{% url 'add_to_cart' product.id %}" class="btn btn-primary">Add to Cart</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+<style>
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+    .product-detail {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        padding: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    .product-image {
+        flex: 1;
+        text-align: center;
+    }
+    .product-image img {
+        max-width: 100%;
+        border-radius: 10px;
+    }
+    .product-info {
+        flex: 2;
+        padding-left: 20px;
+    }
+    .product-info h1 {
+        font-size: 2.5em;
+        margin: 20px 0;
+    }
+    .product-info .description {
+        font-size: 1.2em;
+        color: #555;
+        line-height: 1.6;
+        margin: 20px 0;
+        background-color: #f9f9f9;
+        padding: 15px;
+        border-radius: 10px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    .product-info .price {
+        font-size: 1.5em;
+        color: #b12704;
+        margin: 10px 0;
+    }
+    .product-info .availability {
+        font-size: 1.2em;
+        color: #228B22;
+        margin: 10px 0;
+    }
+    .product-info .ratings {
+        font-size: 1.2em;
+        color: #FFD700;
+        margin: 10px 0;
+    }
+    .product-info .reviews {
+        font-size: 1em;
+        color: #555;
+    }
+    .product-info .btn {
+        margin-top: 20px;
+        padding: 15px 30px;
+        font-size: 1.2em;
+        border-radius: 5px;
+        background-color: #f0c14b;
+        border: 1px solid #a88734;
+        color: #111;
+        text-decoration: none;
+    }
+    .product-info .btn:hover {
+        background-color: #e2b437;
+    }
+</style>
