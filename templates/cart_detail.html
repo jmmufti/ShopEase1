@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            padding: 20px;
+        }
+        .cart-item img {
+            width: 100px;
+        }
+        .cart-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #ccc;
+            padding: 10px 0;
+        }
+        .cart-item-details {
+            flex: 1;
+            margin-left: 20px;
+        }
+        .cart-item-actions {
+            text-align: right;
+        }
+        .summary {
+            margin-top: 20px;
+            border: 1px solid #ccc;
+            padding: 20px;
+        }
+        .summary h2 {
+            margin-top: 0;
+        }
+        .summary .total {
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+        .checkout {
+            background-color: yellow;
+            padding: 10px;
+            text-align: center;
+            font-weight: bold;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+    </header>
+    <main class="container">
+        <h2>Your Cart</h2>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Product</th>
+                    <th>Quantity</th>
+                    <th>Price</th>
+                    <th>Total</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for item in cart_items %}
+                <tr>
+                    <td>{{ item.product.name }}</td>
+                    <td>{{ item.quantity }}</td>
+                    <td>${{ item.product.price }}</td>
+                    <td>${{ item.total_price }}</td>
+                    <td>
+                        <a href="{% url 'add_to_cart' item.product.id %}" class="btn btn-success">+</a>
+                        <a href="{% url 'remove_from_cart' item.product.id %}" class="btn btn-danger">-</a>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <a href="{% url 'index' %}" class="btn btn-primary">Continue Shopping</a>
+
+        <div class="summary">
+            <h2>Summary</h2>
+            <p>Enter Promo Code</p>
+            <input type="text" placeholder="Promo Code">
+            <button>Submit</button>
+            <p>Shipping cost: TBD</p>
+            <p>Discount: $0</p>
+            <p>Tax: TBD</p>
+            <p class="total">Estimated Total: ${{ cart_total }}</p>
+            <!-- Stripe Checkout Button -->
+            
+        </div>
+    </main>
+</body>
+</html>

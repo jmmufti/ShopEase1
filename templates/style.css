@@ -1,0 +1,599 @@
+*{
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    border: border-box;
+}
+
+.navbar{
+    height: 60px;
+    background-color: #0F1111;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.nav-logo{
+    height: 50px;
+    width: 100px;
+}
+
+.logo{
+    background-image: url(Shopease_logo2.png);
+    height: 50px;
+    background-size: cover;
+    width: 160%;
+    margin-left: 5px;
+}
+
+.border{
+    border: 1.5px solid transparent;    
+    border-radius: 2px;
+}
+
+.border:hover{
+    border: 1.5px solid white;
+}
+
+/*2nd Box :*/ 
+
+.nav-address{
+    margin-left: 30px;
+}
+
+.add-icon{
+    display: flex; 
+    align-items: center;
+}
+
+.before_icon{
+    color: #CCC;
+    font-size: 0.85rem;
+    font-weight: 400;
+    margin-left: 15px;
+}
+
+.after_icon{
+    color: white;
+    font-size: 1rem;
+    margin-left: 3.8px;
+    font-weight: 700;
+}
+
+/*3rd box*/
+
+.search-box{
+    border: 1px solid white;
+    border-radius: 5px;
+    background-color: white;
+    display: flex;
+    width: 875px;
+    height: 40px;
+    border: border-box;
+    margin-left: 28px;
+  position: static;
+  justify-content: space-evenly;
+}
+
+
+.select{
+    background-color: #dedcdc;
+    width: 50px;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    border: none;
+    color: #8e8a8a ;
+    font-weight: 700;
+    align-items: center;
+    justify-content: center;
+}
+
+.form{
+    width: 100%; /* Adjust the width as needed */
+    height: 40px; /* Adjust the height as needed */
+    font-size: 1rem; /* You can increase the font size for better visibility if needed */
+    border: none;
+    margin-left: 10px;
+}
+
+.form:hover{
+    
+        border-color: 1px solid orange;
+        border-radius: 5px;
+    
+}
+.magnify{
+    color: black;
+    width: 50px;
+    height: auto;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    border: none;
+    background-color: #febd68;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*3rd box*/
+
+.language{
+    display: flex;
+    height: 50px;
+    width: auto;
+    justify-content: center;
+    align-items: center;
+    margin-left: 5px;
+}
+.select-lang{
+    border: none;
+    background-color: transparent;
+    color: white;
+    font-weight: 700;
+    color: white;
+}
+/*4th box*/
+.user-portion{
+    display: flex;
+    flex-direction: column;
+    height: 50px;
+    width: 130px;
+    justify-content: center;
+}
+
+#sign_in{
+    font-size: 12px;
+    font-weight: 550;
+    margin-left: 5px;
+
+}
+
+.account{
+    background-color: transparent;
+    font-weight: 700;
+    font-size: 14px;
+    color: white;
+    border: none;
+}
+
+.nav-return{
+    display: flex;
+    flex-direction: column;
+    margin-left: 0px;
+    height: 50px;
+    width: 62px;
+    justify-content: center;
+}
+
+#return{
+    font-size: 12px;
+    font-weight: 550;
+    margin-left: 0px;
+}
+
+#order{
+    font-weight: 700;
+    font-size: 14px;
+    color: white;
+}
+
+/*Cart Box*/
+.cart{
+    display: flex;
+    flex-direction: row;
+    margin-left: 0px;
+    height: 50px;
+    width: 62px;
+    justify-content: center;
+    align-items: center;
+}
+
+.cart_big{
+    font-size: 30px;
+    color: #febd68;
+}
+
+.cart_likha{
+    font-weight: 700;
+    font-size: 14px;
+    color: white;
+    margin-top: 15px;
+}
+
+/*Panel*/
+
+.panel{
+    display:flex ;
+    background-color: #222f3d;    
+    height: 40px;
+    color: white;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.panel-all{
+    display: flex;
+}
+
+.panel-all i{
+    font-size: 20px;
+}
+
+#all-panel{
+    font-size: 17px;
+    font-weight: 700;
+    margin-left: 5px;
+}
+
+.other-panel p{
+    display: inline;
+    margin-left: 20px;
+}
+
+.other-panel{
+    font-size: 14px;
+    width: 80%;
+    font-weight: 500;
+}
+
+.shop-electron{
+    font-size: 14px;
+    font-weight: 600;
+}
+
+/*Hero Content*/ 
+
+.hero-image {
+    background-image: url(hero_image.jpg);
+    background-size: cover;
+    height: 400px;
+    /* box-shadow: 0px -5px 20px 5px white ;  */
+    width: auto;
+    display: flex;
+    justify-content: space-evenly; 
+    align-items: start;
+}
+
+.shop-section{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: end;
+    justify-content: space-evenly;
+    background-color: #e2e7e6;
+    box-shadow: 0px -10px 30px 10px white; 
+}
+
+.box {
+    height: 400px;
+    width: 23%;
+    background-color: white;
+    border-color:  white;
+    border-radius: 2px;
+    padding: 20px 0px 15px ;
+}
+
+.box-1{
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+.box-1 h2{
+    margin-top: 11px;
+    font-size: 25px;
+    font-weight: 700;
+    margin-left: 2px;
+    margin-bottom: 12px;
+}
+
+.box-1 .image-contains1{
+    background-image: url(box1_image.jpg);
+    background-size: cover;
+    height: 300px;
+    padding: 10px;
+    width: 91%;
+    margin-bottom: 15px;
+    margin-left: 4px;
+    border-radius: 2px;
+}
+
+.box-1 p{
+    color: green;
+    font-size: 14px;
+    margin-left: 2px;
+}
+
+
+.box-2{
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+.box-2 h2{
+    margin-top: 11px;
+    font-size: 25px;
+    font-weight: 700;
+    margin-left: 2px;
+    margin-bottom: 12px;
+}
+
+.box-2 .image-contains2{
+    background-image: url(box2_image.jpg);
+    background-size: cover;
+    height: 300px;
+    padding: 10px;
+    width: 91%;
+    margin-bottom: 15px;
+    margin-left: 4px;
+    border-radius: 2px;
+}
+
+.box-2 p{
+    color: green;
+    font-size: 14px;
+    margin-left: 2px;
+}
+
+.box-3{
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+.box-3 h2{
+    margin-top: 11px;
+    font-size: 25px;
+    font-weight: 700;
+    margin-left: 2px;
+    margin-bottom: 12px;
+}
+
+.box-3 .image-contains3{
+    background-image: url(box3_image.jpg);
+    background-size: cover;
+    height: 300px;
+    padding: 10px;
+    width: 91%;
+    margin-bottom: 15px;
+    margin-left: 4px;
+    border-radius: 2px;
+}
+
+.box-3 p{
+    color: green;
+    font-size: 14px;
+    margin-left: 2px;
+}
+
+.box-4{
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+.box-4 h2{
+    margin-top: 11px;
+    font-size: 25px;
+    font-weight: 700;
+    margin-left: 2px;
+    margin-bottom: 12px;
+}
+
+.box-4 .image-contains4{
+    background-image: url(box4_image.jpg);
+    background-size: cover;
+    height: 300px;
+    padding: 10px;
+    width: 91%;
+    margin-bottom: 15px;
+    margin-left: 4px;
+    border-radius: 2px;
+}
+
+.box-4 p{
+    color: green;
+    font-size: 14px;
+    margin-left: 2px;
+}
+
+
+.box-5{
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    margin-top: 15px;
+}
+
+.box-5 h2{
+    margin-bottom: 12px;
+    font-size: 25px;
+    font-weight: 700;
+    margin-left: 2px;
+    margin-top: 11px;
+}
+
+.box-5 .image-contains5{
+    background-image: url(box5_image.jpg);
+    background-size: cover;
+    height: 300px;
+    padding: 10px;
+    width: 91%;
+    margin-bottom: 15px;
+    margin-left: 4px;
+    border-radius: 2px;
+}
+
+.box-5 p{
+    color: green;
+    font-size: 14px;
+    margin-left: 2px;
+}
+
+.box-6{
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    margin-top: 15px;
+}
+
+.box-6 h2{
+    margin-bottom: 12px;
+    font-size: 25px;
+    font-weight: 700;
+    margin-left: 2px;
+    margin-top: 11px;
+}
+
+.box-6 .image-contains6{
+    background-image: url(box6_image.jpg);
+    background-size: cover;
+    height: 300px;
+    padding: 10px;
+    width: 91%;
+    margin-bottom: 15px;
+    margin-left: 4px;
+    border-radius: 2px;
+}
+
+.box-6 p{
+    color: green;
+    font-size: 14px;
+    margin-left: 2px;
+}
+
+.box-7{
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    margin-top: 15px;
+}
+
+.box-7 h2{
+    margin-bottom: 12px;
+    font-size: 25px;
+    font-weight: 700;
+    margin-left: 2px;
+    margin-top: 11px;
+}
+
+.box-7 .image-contains7{
+    background-image: url(box7_image.jpg);
+    background-size: cover;
+    height: 300px;
+    padding: 10px;
+    width: 91%;
+    margin-bottom: 15px;
+    margin-left: 4px;
+    border-radius: 2px;
+}
+
+.box-7 p{
+    color: green;
+    font-size: 14px;
+    margin-left: 2px;
+}
+
+.box-8{
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    margin-top: 15px;
+}
+
+.box-8 h2{
+    margin-bottom: 12px;
+    font-size: 25px;
+    font-weight: 700;
+    margin-left: 2px;
+    margin-top: 11px;
+}
+
+.box-8 .image-contains8{
+    background-image: url(box8_image.jpg);
+    background-size: cover;
+    height: 300px;
+    padding: 10px;
+    width: 91%;
+    margin-bottom: 15px;
+    margin-left: 4px;
+    border-radius: 2px;
+}
+
+.box-8 p{
+    color: green;
+    font-size: 14px;
+    margin-left: 2px;
+}
+
+.foot-panel1{
+    background-color: #37475a;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 13px;
+    font-weight: 600;
+    margin-top: 15px;
+    box-shadow: 0px -10px 30px 10px white; 
+}
+
+.foot-panel2{
+    background-color: #222f3d;
+    height: 300px;
+    color: white;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 10px;
+}
+
+.foot-pera{
+    font-size: 0.85rem;
+    font-weight: 700px;
+    margin-bottom: 5px;
+}
+
+.foot-panel2 a{
+    display: block;
+    color: #dddddd;
+    font-size: 0.7rem; 
+    margin-top: 10px;
+}
+
+.foot-panel3{
+    background-color: #222f3d;
+    height: 70px;
+    color: white;
+    border-top: 0.1px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo_foot{
+    background-image: url(Shopease_logo3.png);
+    height: 50px;
+    background-size: cover;
+    width: 170px;
+}
+
+.foot-panel5{
+    background-color: #0F1111;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.extra-p5{
+    margin-top: 5px;
+}
+
+.extra-2p5{
+    margin-top: 3px;
+}
+
+
+
+

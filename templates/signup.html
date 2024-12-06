@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - ShopEase</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="signup-form">
+            <h2>Sign Up as {{ role|title }}</h2>
+            <form method="post">
+                {% csrf_token %}
+                <div class="mb-3">
+                    <label for="id_username" class="form-label">Username</label>
+                    {{ form.username }}
+                </div>
+                <div class="mb-3">
+                    <label for="id_email" class="form-label">Email</label>
+                    {{ form.email }}
+                </div>
+                <div class="mb-3">
+                    <label for="id_password" class="form-label">Password</label>
+                    {{ form.password }}
+                </div>
+                <div class="mb-3">
+                    <label for="id_confirm_password" class="form-label">Re-enter password</label>
+                    {{ form.confirm_password }}
+                </div>
+                <button type="submit" class="btn btn-warning submit-btn">Continue</button>
+            </form>
+            <div class="form-footer">
+                <p>By creating an account, you agree to our <a href="#">Conditions of Use</a> and <a href="#">Privacy Notice</a>.</p>
+                <p>Already have an account? <a href="{% url 'signin' %}">Sign in</a></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
